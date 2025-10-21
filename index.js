@@ -15,7 +15,7 @@ app.get("/clientes", function(req,res){
 app.get("/clientes/id", function(req,res){
     //req --> dados enviados pelo cliente
     //res --> resposta enviada pelo servidor de volta ao cliente
-    res.send("retorno consulta:" + req.params.parametro);
+    res.send("Consulta de cliente por id:" + req.params.parametro);
 })
 
 
@@ -24,9 +24,9 @@ app.get("/cadastro/{:nome}", function(req,res){
     //req --> dados enviados pelo cliente
     var nome = req.params.nome;
     if (nome){
-        res.send("<h1>produto " + nome + " criado!</h1>");
+        res.send("<h1>Cliente " + nome + " cadastrado!</h1>");
     }else{
-        res.send("produto criado!");
+        res.send("Cliente cadastrado!");
     }
     
 })
