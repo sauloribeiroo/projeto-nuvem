@@ -3,16 +3,16 @@ const app = express(); //iniciando o express
 
 //criando a rota inicial
 app.get("/", function(req,res){
-    res.send("<h1>Bem vindo ao meu site!</h1>");
+    res.send("<h1>Bem vindo ao meu site de exemplo para o trabalho de nuvem!</h1>");
 })
 
-//rota do cadastro de produtos
-app.get("/produtos", function(req,res){
-    res.send("<h1>Lista de Produtos!</h1>");
+//rota do cadastro de clien
+app.get("/clientes", function(req,res){
+    res.send("<h1>Lista de Clientes!</h1>");
 })
 
 //rota com parametro 
-app.get("/consulta/:parametro", function(req,res){
+app.get("/clientes/id", function(req,res){
     //req --> dados enviados pelo cliente
     //res --> resposta enviada pelo servidor de volta ao cliente
     res.send("retorno consulta:" + req.params.parametro);
